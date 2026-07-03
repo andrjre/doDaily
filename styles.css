@@ -4,6 +4,7 @@ html{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    color:#393e46;
 }
 
 header{
@@ -41,6 +42,10 @@ footer{
 
 #content{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #create{
@@ -61,26 +66,56 @@ footer{
 }   
 
 #create.open{
-    transform: translateY(-75px);
+    transform: translateY(-55px);
 }
 
 #dropdown{
     color: #393e46;
-    width: 150px;
-    height: 150px;
     font-size: 10em;
+    width: 450px;
+    height: 300px;
+    border: 15px solid #393e46;
     justify-content: center;
     align-items: center;
     visibility: hidden;
     opacity: 0;
     display: flex;
-    transition: 0.5s ease-in;
-    transition: 0.2s ease-out;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    border-radius: 30px;
+    gap:50px;
 }
 
 #dropdown.open{
     visibility: visible;
     opacity: 1;
+    transform: translateY(-35px);
+}
+
+#task_input{
+    width:400px;
+    height: 80px;
+    font-size: 40px;
+    border: 10px #393e46 solid;
+    border-radius: 30px;
+}
+
+#task_input:focus{
+    outline: none;
+}
+
+#submit{
+    width:200px;
+    height:60px;
+    border: 8px #393e46 solid;
+    border-radius: 30px;
+    background-color: #eeeeee;
+    transition: 0.1s ease-in-out;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: #929aab;
 }
 
 #gh{
