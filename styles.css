@@ -99,6 +99,17 @@ footer{
     opacity: 0;
 }
 
+#todoListContainer{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: absolute;
+    top:0;
+    left:0;
+    height: 200px;
+    width: 200px;
+}
+
 #todoList{
     display: flex;
     justify-content: left;
@@ -108,10 +119,18 @@ footer{
 }
 
 #todo{
-
     display: flex;
-
+    gap:20px;
 }   
+
+#todoBox{
+    width:100px;
+    height:100px;
+}
+
+#todoText{
+    font-size: 100px;
+}
 
 #dropdown{
     color: #393e46;
@@ -134,6 +153,11 @@ footer{
     visibility: visible;
     opacity: 1;
     transform: translateY(-35px);
+}
+
+#dropdown.open_right{
+    visibility: visible;
+    opacity: 1;
 }
 
 #task_input{
