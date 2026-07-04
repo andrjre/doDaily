@@ -3,6 +3,9 @@ var top_create = document.getElementById("top_create");
 var dropdown = document.getElementById("dropdown");
 var submit = document.getElementById("submit");
 var todoList = document.getElementById("todoList");
+var content = document.getElementById("content");
+var firstSubmit = true;
+
 
 create.addEventListener("click",toggleDropdown);
 top_create.addEventListener("click",toggleDropdown);
@@ -14,6 +17,7 @@ function toggleDropdown(){
 }
 
 function submitTodo(){
+    
     var task_input = document.getElementById("task_input").value;
     var todo = document.createElement("div");
         todo.id = "todo"
@@ -26,8 +30,12 @@ function submitTodo(){
     todo.appendChild(todoBox)
     todo.appendChild(todoText);
     toggleDropdown();
-    movePlus();
+    if(firstSubmit == true){
+        movePlus();
+    }
+    firstSubmit = false;
 }
+
 
 
 function movePlus(){
