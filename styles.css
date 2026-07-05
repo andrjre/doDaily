@@ -14,6 +14,25 @@ header{
     align-items: center;
 }
 
+#timer{
+    position: absolute;
+    left: 0;
+    color: #393e46;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#title{
+    font-size:medium;
+    color: #393e46;
+    cursor: pointer;
+    width:fit-content;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #top_create{
     position: absolute;
@@ -36,8 +55,6 @@ header{
     transition: 0.5s ease-in-out;
 }
 
-
-
 main{
     height:75vh;
     display: flex;
@@ -51,17 +68,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items:end;
-}
-
-#title{
-    font-size:medium;
-    color: #393e46;
-    cursor: pointer;
-    width:fit-content;
-    height:fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #content{
@@ -120,6 +126,7 @@ footer{
 #todo{
     display: flex;
     gap:20px;
+    transition: 1s ease-in-out;
 }   
 
 #todoBox{
@@ -133,6 +140,7 @@ footer{
 
 #dropdown{
     color: #393e46;
+    background-color: white;
     font-size: 10em;
     width: 450px;
     height: 300px;
@@ -146,6 +154,7 @@ footer{
     transition: 0.3s ease-in-out;
     border-radius: 30px;
     gap:50px;
+    z-index: 1;
 }
 
 #dropdown.open{
