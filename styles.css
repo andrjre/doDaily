@@ -125,6 +125,7 @@ footer{
 
 #todo{
     display: flex;
+    align-items: center;
     gap:20px;
     transition: 1s ease-in-out;
 }   

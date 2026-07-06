@@ -37,11 +37,13 @@ function submitTodo(){
         todoText.id = "todoText";
         todoText.classList.add(`todoText.${count}`);
         count++;
+    
 
     todoText.textContent = task_input;
     todoList.appendChild(todo);
     todo.appendChild(todoBox)
     todo.appendChild(todoText);
+
 
     if(firstSubmit == true){
         toggleRightDropdown();
