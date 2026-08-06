@@ -26,16 +26,14 @@ function submitTodo(){
     
     var task_input = document.getElementById("task_input").value;
 
+    
     var todo = document.createElement("div");
-        todo.id = "todo"
-        todo.classList.add(`todo.${count}`);
+        todo.classList.add("todo", `todo-${count}`);
     var todoBox = document.createElement("input");
         todoBox.type = "checkbox";
-        todoBox.id = "todoBox";
-        todoBox.classList.add(`todoBox.${count}`);
+        todoBox.classList.add("todoBox", `todoBox-${count}`);
     var todoText = document.createElement("div");
-        todoText.id = "todoText";
-        todoText.classList.add(`todoText.${count}`);
+        todoText.classList.add("todoText", `todoText-${count}`);
         count++;
     
 

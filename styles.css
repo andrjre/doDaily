@@ -123,19 +123,19 @@ footer{
     height:fit-content
 }
 
-#todo{
+.todo{
     display: flex;
     align-items: center;
     gap:20px;
     transition: 1s ease-in-out;
 }   
 
-#todoBox{
+.todoBox{
     width:100px;
     height:100px;
 }
 
-#todoText{
+.todoText{
     font-size: 70px;
 }
 
