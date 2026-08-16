@@ -38,21 +38,13 @@ header{
     position: absolute;
     right: 0;
     color: #393e46;
-    visibility: hidden;
-    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 140px;
     height: 140px;
     font-size: 10em;
     cursor: pointer;
-}
-
-#top_create.open{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s ease-in-out;
 }
 
 main{
@@ -77,32 +69,6 @@ footer{
     justify-content: center;
     align-items: center;
     width:100%;
-}
-
-#create{
-    color: #393e46;
-    width: 150px;
-    height: 150px;
-    font-size: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
-
-#create:hover{
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
-}   
-
-#create.open{
-    transform: translateY(-55px);
-}
-
-#create.moved{
-    visibility:hidden;
-    opacity: 0;
 }
 
 #todoListContainer{
@@ -137,6 +103,12 @@ footer{
 
 .todoText{
     font-size: 70px;
+}
+
+.todoText:hover{
+    text-decoration: line-through;
+    opacity: 70%;
+    cursor: pointer;
 }
 
 #dropdown{
