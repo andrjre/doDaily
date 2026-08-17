@@ -37,6 +37,10 @@ function renderTodo(item) {
         todo.completed = this.checked;
         saveTodos();
     });
+
+    todoBox.addEventListener("click", function(e){
+        e.stopPropagation();
+    });
 }
 
 function todoRemove() {
@@ -58,6 +62,7 @@ function submitTodo() {
 
 function saveTodos() {
     localStorage.setItem("todos", JSON.stringify(todos));
+    console.log(todos);
 }
 
 function loadTodos() {

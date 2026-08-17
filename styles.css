@@ -1,10 +1,21 @@
 html{
-    height:100vh;
+    height:100%;
+    overflow-y:auto;
+    overflow:hidden;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     color:#393e46;
+    overflow-y:auto;
 }
 
 header{
@@ -41,44 +52,48 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 140px;
-    font-size: 10em;
+    width: 100px;
+    height: 100px;
+    font-size: 8em;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    overflow: hidden;
+}
+
+#top_create:hover{
+    transform: scale(1.1);
     cursor: pointer;
 }
 
 main{
-    height:75vh;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items:center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 footer{
-    height: 6vh;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
-    align-items:end;
+    align-items: center;
+    padding-bottom: 8px;
 }
 
 #content{
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 }
 
 #todoListContainer{
     display: flex;
     justify-content: start;
     align-items: start;
-    position: absolute;
-    top:0;
-    left:0;
-    height: 200px;
+    padding-left: 20px
 }
 
 #todoList{
@@ -112,11 +127,14 @@ footer{
 }
 
 #dropdown{
+    position: fixed;
+    top: 150px;
+    right: 10px;
     color: #393e46;
     background-color: white;
-    font-size: 10em;
-    width: 450px;
-    height: 300px;
+    font-size: 3em;
+    width: 300px;
+    height: 200px;
     border: 15px solid #393e46;
     justify-content: center;
     align-items: center;
@@ -126,8 +144,10 @@ footer{
     flex-direction: column;
     transition: 0.3s ease-in-out;
     border-radius: 30px;
-    gap:50px;
-    z-index: 1;
+    gap: 15px;
+    z-index: 999;
+    font-size: 1em;
+    
 }
 
 #dropdown.open{
@@ -142,11 +162,9 @@ footer{
 }
 
 #task_input{
-    width:400px;
-    height: 80px;
-    font-size: 40px;
-    border: 10px #393e46 solid;
-    border-radius: 30px;
+    width: 240px;
+    height: 50px;
+    font-size: 20px;
 }
 
 #task_input:focus{
@@ -154,12 +172,8 @@ footer{
 }
 
 #submit{
-    width:200px;
-    height:60px;
-    border: 8px #393e46 solid;
-    border-radius: 30px;
-    background-color: #eeeeee;
-    transition: 0.1s ease-in-out;
+    width: 140px;
+    height: 40px;
 }
 
 #submit:hover{
