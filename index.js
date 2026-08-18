@@ -7,6 +7,9 @@ var todos = [];
 
 top_create.addEventListener("click", toggleRightDropdown);
 submit.addEventListener("click", submitTodo);
+document.addEventListener("keydown", function(e){
+    if(e.key === "Enter" && dropdown.classList.contains("open_right")) submitTodo();
+});
 
 function toggleRightDropdown() {
     dropdown.classList.toggle("open_right");
