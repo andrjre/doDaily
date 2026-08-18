@@ -139,7 +139,7 @@ footer{
     font-size: 3em;
     width: 300px;
     height: 200px;
-    border: 15px solid #393e46;
+    border: 10px solid #393e46;
     justify-content: center;
     align-items: center;
     visibility: hidden;
@@ -169,6 +169,9 @@ footer{
     width: 240px;
     height: 50px;
     font-size: 20px;
+    border-radius: 20px;
+    border-style:solid;
+    border-color: #393e46;
 }
 
 #task_input:focus{
@@ -178,11 +181,17 @@ footer{
 #submit{
     width: 140px;
     height: 40px;
+    background-color: #929aab;
+    border-color: #393e46;
+    border-radius: 20px;
+    transition: ease-in-out .2s;
+    border-style: solid;
 }
 
 #submit:hover{
     cursor: pointer;
-    background-color: #929aab;
+    color:white;
+    background-color: #393e46;
 }
 
 #gh{
