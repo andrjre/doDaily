@@ -28,10 +28,9 @@ function updateTimer(){
     document.getElementById("countdown").textContent = formatted;
 }
 
-
-
 top_create.addEventListener("click", toggleRightDropdown);
 submit.addEventListener("click", submitTodo);
+
 document.addEventListener("keydown", function(e){
     if(e.key === "Enter" && dropdown.classList.contains("open_right")) submitTodo();
 });
