@@ -18,6 +18,15 @@ body{
     overflow-y:auto;
 }
 
+#bear{
+    width: 10%;
+    height: auto;    
+}
+
+#bear:hover{
+    cursor: pointer;
+}
+
 header{
     height: 15vh;
     display: flex;
