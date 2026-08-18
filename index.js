@@ -5,6 +5,31 @@ var todoList = document.getElementById("todoList");
 var count = 1;
 var todos = [];
 
+function updateTimer(){
+    var now = new Date();
+    var midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
+    var diff = midnight - now;
+
+    if(diff <= 0){
+        todos.forEach(function(t){ t.completed = false; });
+        localStorage.setItem("lastReset", new Date().toDateString());
+        saveTodos();
+    }
+
+    var hours = Math.floor(diff / 3600000);
+    var minutes = Math.floor((diff % 3600000) / 60000);
+    var seconds = Math.floor((diff % 60000) / 1000);
+    var formatted = 
+        String(hours).padStart(2, '0') + ':' +
+        String(minutes).padStart(2, '0') + ':' +
+        String(seconds).padStart(2, '0');
+
+    document.getElementById("countdown").textContent = formatted;
+}
+
+
+
 top_create.addEventListener("click", toggleRightDropdown);
 submit.addEventListener("click", submitTodo);
 document.addEventListener("keydown", function(e){
@@ -65,7 +90,6 @@ function submitTodo() {
 
 function saveTodos() {
     localStorage.setItem("todos", JSON.stringify(todos));
-    console.log(todos);
 }
 
 function loadTodos() {
@@ -73,9 +97,17 @@ function loadTodos() {
     if (stored) {
         todos = JSON.parse(stored);
         count = Math.max(...todos.map(t => t.id)) + 1;
+        var lastReset = localStorage.getItem("lastReset");
+        var today = new Date().toDateString();
+        if(lastReset !== today){
+            todos.forEach(function(t){ t.completed = false; });
+            localStorage.setItem("lastReset", today);
+            saveTodos();
+        }
         todos.forEach(renderTodo);
-    } else {
     }
 }
 
 loadTodos();
+updateTimer();
+setInterval(updateTimer, 1000);
