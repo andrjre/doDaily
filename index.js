@@ -38,6 +38,9 @@ document.addEventListener("keydown", function(e){
 
 function toggleRightDropdown() {
     dropdown.classList.toggle("open_right");
+    setTimeout(function(){
+        document.getElementById("task_input").focus();
+    }, 50);
 }
 
 function closeDropdown() {
