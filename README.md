@@ -2,7 +2,7 @@
 
 A website to track daily tasks.
 
-As someone with a lot of little tasks to be done everyday, doDaiy acts as a centralized location to keep track of whether a task has been done for that day or not. Each task is set to **Incomplete** at midnight everyday to ensure that two days won't be mixed up.
+As someone with a lot of little tasks to be done everyday, doDaily acts as a centralized location to keep track of whether a task has been done for that day or not. Each task is set to **Incomplete** at midnight everyday to ensure that two days won't be mixed up.
 
 andrjre.github.io/doDaily 
 
